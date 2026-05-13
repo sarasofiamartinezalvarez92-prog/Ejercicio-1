@@ -33,12 +33,12 @@ while continuar == "si":
     print("El promedio de", nombre, "es:", promedio)
 
     if promedio >= 4.5:
-        print("Excelente")
+        print("El estudiantes tuvo un desempeño excelente")
 
     elif promedio >= 3:
-        print("Aprobó")
+        print("El estudiante aprobó")
 
     else:
-        print("Reprobó")
+        print("El estudiante reprobó")
 
     continuar = input("¿Desea ingresar otro estudiante? ")
