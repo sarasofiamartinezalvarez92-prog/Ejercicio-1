@@ -1,4 +1,4 @@
-print("PROGRAMA DE CALIFICACIONES S&S:)")
+print("PROGRAMA DE CALIFICACIONES S&S:")
 
 nombre = input("Ingrese el nombre del estudiante: ")
 
@@ -22,5 +22,17 @@ for contador in range(1, 6):
         nota = input("Ingrese la quinta nota: ")
 
     nota = float(nota)
-
     suma = suma + nota
+
+promedio = suma / 5
+
+print("El promedio de", nombre, "es:", promedio)
+
+if promedio >= 4.5:
+    print("Excelente")
+
+elif promedio >= 3:
+    print("Aprobó")
+
+else:
+    print("Reprobó")
