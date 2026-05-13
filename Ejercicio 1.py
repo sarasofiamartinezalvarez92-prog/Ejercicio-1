@@ -1,38 +1,44 @@
 print("PROGRAMA DE CALIFICACIONES S&S:")
 
-nombre = input("Ingrese el nombre del estudiante: ")
+continuar = "si"
 
-suma = 0
+while continuar == "si":
 
-for contador in range(1, 6):
+    nombre = input("Ingrese el nombre del estudiante: ")
 
-    if contador == 1:
-        nota = input("Ingrese la primera nota: ")
+    suma = 0
 
-    elif contador == 2:
-        nota = input("Ingrese la segunda nota: ")
+    for contador in range(1, 6):
 
-    elif contador == 3:
-        nota = input("Ingrese la tercera nota: ")
+        if contador == 1:
+            nota = input("Ingrese la primera nota: ")
 
-    elif contador == 4:
-        nota = input("Ingrese la cuarta nota: ")
+        elif contador == 2:
+            nota = input("Ingrese la segunda nota: ")
+
+        elif contador == 3:
+            nota = input("Ingrese la tercera nota: ")
+
+        elif contador == 4:
+            nota = input("Ingrese la cuarta nota: ")
+
+        else:
+            nota = input("Ingrese la quinta nota: ")
+
+        nota = float(nota)
+        suma = suma + nota
+
+    promedio = suma / 5
+
+    print("El promedio de", nombre, "es:", promedio)
+
+    if promedio >= 4.5:
+        print("Excelente")
+
+    elif promedio >= 3:
+        print("Aprobó")
 
     else:
-        nota = input("Ingrese la quinta nota: ")
+        print("Reprobó")
 
-    nota = float(nota)
-    suma = suma + nota
-
-promedio = suma / 5
-
-print("El promedio de", nombre, "es:", promedio)
-
-if promedio >= 4.5:
-    print("Excelente")
-
-elif promedio >= 3:
-    print("Aprobó")
-
-else:
-    print("Reprobó")
+    continuar = input("¿Desea ingresar otro estudiante? ")
